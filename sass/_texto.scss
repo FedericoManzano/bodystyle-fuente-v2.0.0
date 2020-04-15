@@ -75,7 +75,7 @@
 }
 
 .c-rojo-o {
-    color: $fd-rojo-o !important;;
+    color: $fd-rojo-o-1 !important;;
 }
 
 .c-rojo-t {
@@ -99,7 +99,7 @@
 }
 
 .c-azul-o{
-    color: $fd-azul-o !important;
+    color: $fd-azul-o-2 !important;
 }
 
 .c-azul-ve {
@@ -130,7 +130,7 @@
 }
 
 .c-verde-o {
-    color: $fd-verde-o !important;
+    color: $fd-verde-o-2 !important;
 }
 
 .c-verde-t {
@@ -152,7 +152,7 @@
 }
 
 .c-gris-o {
-    color: $fd-gris-o !important;
+    color: $fd-gris-o-2 !important;
 }
 
 .c-gris-t {
@@ -175,11 +175,11 @@
 }
 
 .c-blanco {
-    color: $blanco !important;
+    color: $fd-blanco !important;
 }
 
 .c-negro {
-    color: $negro !important;
+    color: $fd-negro !important;
 }
 
 .c-violeta {
@@ -191,7 +191,7 @@
 }
 
 .c-violeta-o {
-    color: $fd-violeta-o !important;
+    color: $fd-violeta-o-1 !important;
 }
 
 .fd-violeta-t {
@@ -211,7 +211,7 @@
 }
 
 .c-naranja-o {
-    color: $fd-naranja-o !important;
+    color: $fd-naranja-o-2 !important;
 }
 
 .c-naranja-c {
@@ -239,7 +239,7 @@
 }
 
 .c-amarillo-o {
-    color: $fd-amarillo-o !important;
+    color: $fd-amarillo-o-2 !important;
 }
 
 .c-amarillo-t {
@@ -250,8 +250,8 @@
     color: $fd-amarillo-ve !important;
 }
 
-.c-amarillo-ro {
-    color: $fd-amarillo-ro !important;
+.c-amarillo-an {
+    color: $fd-amarillo-an !important;
 }
 
 
@@ -271,7 +271,7 @@
 
 @media (max-width: dameMedida(m)){
     @for $i from 8 through 100 {
-        .fz-m#{$i} {
+        .fz-m-#{$i} {
             font-size: #{$i}px !important;
         }
     }

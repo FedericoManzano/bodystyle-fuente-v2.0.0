@@ -68,12 +68,10 @@ a:not[href]{
 
 p, .p {
     font-size: map-get($letras, "p");
-    font-size: 1.1em ; 
 }
 
 span{
     font-size: map-get($letras, "span");
-    font-size: 1em ;
 }
 
 

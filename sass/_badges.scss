@@ -452,7 +452,7 @@
         align-items: center;
         cursor: pointer;
         &:hover {
-            background-color: $fd-azul-o;
+            background-color: $fd-azul-o-2;
         }
     }
 
@@ -542,7 +542,7 @@
         color: rgb(34, 34, 34);
     }
     &:hover {
-        background-color: $fd-rojo-o;
+        background-color: $fd-rojo-o-1;
     }
 }
 
@@ -554,7 +554,7 @@
     }
 
     &:hover {
-        background-color: $fd-verde-o;
+        background-color: $fd-verde-o-2;
     }
 }
 
@@ -566,7 +566,7 @@
     }
 
     &:hover {
-        background-color: $fd-azul-o;
+        background-color: $fd-azul-o-2;
     }
 }
 
@@ -578,7 +578,7 @@
         color: rgb(34, 34, 34);
     }
     &:hover {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 
@@ -589,7 +589,7 @@
         color: rgb(34, 34, 34);
     }
     &:hover {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
         color: white;
     }
 }
@@ -620,7 +620,7 @@
         height: 30px;
         clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
         -webkit-clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
-        background-color: $fd-rojo-o;
+        background-color: $fd-rojo-o-2;
         left: 0;
         bottom: -9px;
         z-index: -1;
@@ -631,14 +631,14 @@
 .badge-solapa-azul {
     background-color: $fd-azul;
     &::before {
-        background-color: $fd-azul-o;
+        background-color: $fd-azul-o-2;
     }
 }
 
 .badge-solapa-verde {
     background-color: $fd-verde;
     &::before {
-        background-color: $fd-verde-o;
+        background-color: $fd-verde-o-2;
     }
 }
 
@@ -646,7 +646,7 @@
     background-color: $fd-gris-c;
     color: black;
     &::before {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 
@@ -661,7 +661,7 @@
 .badge-solapa-negro {
     background-color: $fd-negro;
     &::before {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 
@@ -970,7 +970,7 @@
     box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:hover {
-        background-color: $fd-rojo-o;
+        background-color: $fd-rojo-o-1;
     }
     .cerrar {
         width: 10px;
@@ -1000,7 +1000,7 @@
 .badge-cierre-verde {
     background-color: $fd-verde;
     &:hover {
-        background-color: $fd-verde-o;
+        background-color: $fd-verde-o-2;
     }
 }
 
@@ -1008,7 +1008,7 @@
 .badge-cierre-azul {
     background-color: $fd-azul;
     &:hover {
-        background-color: $fd-azul-o;
+        background-color: $fd-azul-o-2;
     }
 }
 
@@ -1016,7 +1016,7 @@
 .badge-cierre-gris {
     background-color: $fd-gris;
     &:hover {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 

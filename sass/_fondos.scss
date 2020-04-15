@@ -5,6 +5,7 @@
     Colores de fondo para los componentes
 */
 
+// Tonalidades de rojo
 .fd-rojo {
     background-color: $fd-rojo !important;
 }
@@ -13,8 +14,20 @@
     background-color: $fd-rojo-c !important;;
 }
 
-.fd-rojo-o {
-    background-color: $fd-rojo-o !important;;
+.fd-rojo-o-1 {
+    background-color: $fd-rojo-o-1 !important;;
+}
+
+.fd-rojo-o-2 {
+    background-color: $fd-rojo-o-2 !important;;
+}
+
+.fd-rojo-o-3 {
+    background-color: $fd-rojo-o-3 !important;;
+}
+
+.fd-rojo-o-4 {
+    background-color: $fd-rojo-o-4 !important;;
 }
 
 .fd-rojo-t {
@@ -29,6 +42,35 @@
     background-color: $fd-rojo-ro !important;
 }
 
+// Tonalidades de Rosa
+.fd-rosa {
+    background-color: $fd-rosa !important;
+}
+
+.fd-rosa-c {
+    background-color: $fd-rosa-c !important;;
+}
+
+.fd-rosa-o-1 {
+    background-color: $fd-rosa-o-1 !important;;
+}
+
+.fd-rosa-o-2 {
+    background-color: $fd-rosa-o-2 !important;;
+}
+
+.fd-rosa-o-3 {
+    background-color: $fd-rosa-o-3 !important;;
+}
+
+.fd-rosa-o-4 {
+    background-color: $fd-rosa-o-4 !important;;
+}
+
+.fd-rosa-t {
+    background-color: $fd-rosa-t !important;;
+}
+
 .fd-azul {
     background-color: $fd-azul !important;
 }
@@ -37,9 +79,24 @@
     background-color: $fd-azul-c !important;
 }
 
-.fd-azul-o{
-    background-color: $fd-azul-o !important;
+.fd-azul-o-1{
+    background-color: $fd-azul-o-1 !important;
 }
+
+.fd-azul-o-2{
+    background-color: $fd-azul-o-2 !important;
+}
+
+
+.fd-azul-o-3{
+    background-color: $fd-azul-o-3 !important;
+}
+
+
+.fd-azul-o-4{
+    background-color: $fd-azul-o-4 !important;
+}
+
 
 .fd-azul-ve {
     background-color: $fd-azul-ve !important;
@@ -61,6 +118,7 @@
     background-color: $fd-azul-vi !important;
 }
 
+// *** Verde  *** //
 .fd-verde {
     background-color: $fd-verde !important;
 }
@@ -68,10 +126,20 @@
     background-color: $fd-verde-c !important;
 }
 
-.fd-verde-o {
-    background-color: $fd-verde-o !important;
+.fd-verde-o-1 {
+    background-color: $fd-verde-o-1 !important;
 }
 
+.fd-verde-o-2 {
+    background-color: $fd-verde-o-2 !important;
+}
+
+.fd-verde-o-3 {
+    background-color: $fd-verde-o-3 !important;
+}
+.fd-verde-o-4 {
+    background-color: $fd-verde-o-4 !important;
+}
 .fd-verde-t {
     background-color: $fd-verde-t !important;
 }
@@ -90,8 +158,20 @@
     background-color: $fd-gris-c !important;
 }
 
-.fd-gris-o {
-    background-color: $fd-gris-o !important;
+.fd-gris-o-1 {
+    background-color: $fd-gris-o-1 !important;
+}
+
+.fd-gris-o-2 {
+    background-color: $fd-gris-o-2 !important;
+}
+
+.fd-gris-o-3 {
+    background-color: $fd-gris-o-3 !important;
+}
+
+.fd-gris-o-4 {
+    background-color: $fd-gris-o-4 !important;
 }
 
 .fd-gris-t {
@@ -114,11 +194,11 @@
 }
 
 .fd-blanco {
-    background-color: $blanco !important;
+    background-color: $fd-blanco !important;
 }
 
 .fd-negro {
-    background-color: $negro !important;
+    background-color: $fd-negro !important;
 }
 
 .fd-violeta {
@@ -129,9 +209,24 @@
     background-color: $fd-violeta-c !important;
 }
 
-.fd-violeta-o {
-    background-color: $fd-violeta-o !important;
+.fd-violeta-o-1 {
+    background-color: $fd-violeta-o-1 !important;
 }
+
+.fd-violeta-o-2 {
+    background-color: $fd-violeta-o-2 !important;
+}
+
+
+.fd-violeta-o-3 {
+    background-color: $fd-violeta-o-3 !important;
+}
+
+
+.fd-violeta-o-4 {
+    background-color: $fd-violeta-o-4 !important;
+}
+
 
 .fd-violeta-t {
     background-color: $fd-violeta-t !important;
@@ -145,12 +240,26 @@
     background-color: $fd-violeta-ro !important;
 }
 
+
+// Tonalidades naranja
 .fd-naranja {
     background-color: $fd-naranja !important;
 }
 
-.fd-naranja-o {
-    background-color: $fd-naranja-o !important;
+.fd-naranja-o-1 {
+    background-color: $fd-naranja-o-1 !important;
+}
+
+.fd-naranja-o-2 {
+    background-color: $fd-naranja-o-2 !important;
+}
+
+.fd-naranja-o-3 {
+    background-color: $fd-naranja-o-3 !important;
+}
+
+.fd-naranja-o-4 {
+    background-color: $fd-naranja-o-4 !important;
 }
 
 .fd-naranja-c {
@@ -169,7 +278,7 @@
     background-color: $fd-naranja-am !important;
 }
 
-
+// *** Tonalidadesd de amarillo
 .fd-amarillo {
     background-color: $fd-amarillo !important;
 }
@@ -178,8 +287,19 @@
     background-color: $fd-amarillo-c !important;
 }
 
-.fd-amarillo-o {
-    background-color: $fd-amarillo-o !important;
+.fd-amarillo-o-1 {
+    background-color: $fd-amarillo-o-1 !important;
+}
+
+.fd-amarillo-o-2 {
+    background-color: $fd-amarillo-o-2 !important;
+}
+.fd-amarillo-o-3 {
+    background-color: $fd-amarillo-o-3 !important;
+}
+
+.fd-amarillo-o-4 {
+    background-color: $fd-amarillo-o-4 !important;
 }
 
 .fd-amarillo-t {
@@ -190,8 +310,8 @@
     background-color: $fd-amarillo-ve !important;
 }
 
-.fd-amarillo-ro {
-    background-color: $fd-amarillo-ro !important;
+.fd-amarillo-an {
+    background-color: $fd-amarillo-an !important;
 }
 
 

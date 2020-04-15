@@ -10,11 +10,8 @@
 //Generales 
 @import "globales";
 @import "generales";
-@import "config";
-@import "mixin-generales";
+@import "utilitarios";
 @import "iconos";
-@import "screenUtilitarios";
-@import "colores";
 @import "fondos";
 
 //Aliniamiento 
@@ -23,7 +20,7 @@
 
 //Utilitarios 
 @import "texto";
-@import "css";
+
 
 //CSS 
 @import "efecto-borde";

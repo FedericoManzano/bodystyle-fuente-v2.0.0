@@ -22,3 +22,25 @@
         @warn "El grosor seleccionado no existe";
     }
 }
+
+
+// Función que devuelve el nivel del componente
+@function superposicion($al) {
+    @if map-has-key($superposicion, $al) {
+        @return map-get($superposicion, $al);
+    }@else {
+        @warn "El componente no existe";
+    }
+}
+
+// Devuelve el breackpoint 
+@function dameMedida($med) {
+    @if map-has-key($tamaños, $med) {
+        @return map-get($tamaños, $med);
+    }
+}
+
+// Verifica si un valor es multiplo de 5
+@function multiplo5($num){
+    @return $num % 5 == 0;
+}

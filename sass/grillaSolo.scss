@@ -1,0 +1,164 @@
+.fila {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr) !important;   
+
+    
+
+    @for $i from 1 through 12 {
+        .cxs-#{$i} { 
+            grid-column: span $i ;
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .cs-#{$i} { 
+            grid-column: span $i;
+        }
+    } 
+    @for $i from 1 through 12 {
+        .cm-#{$i} { 
+            grid-column: span $i;
+        }
+    }
+    @for $i from 1 through 12 {
+        .cl-#{$i} { 
+            grid-column: span $i;
+        }
+    }
+
+    @for $i from 1 through 12 {
+        $off: $i + 1;
+        @for $j from 1 through 12 {
+            .offset-xs-#{$i}-#{$j} {
+                grid-column: #{$off} / span #{$j} 
+            }
+        }
+    }
+
+
+    @for $i from 1 through 12 {
+        $off: $i + 1;
+        @for $j from 1 through 12 {
+            .offset-s-#{$i}-#{$j} {
+                grid-column: #{$off} / span #{$j} 
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        $off: $i + 1;
+        @for $j from 1 through 12 {
+            .offset-m-#{$i}-#{$j} {
+                grid-column: #{$off} / span #{$j} 
+            }
+        }
+    }
+    @for $i from 1 through 12 {
+        $off: $i + 1;
+        @for $j from 1 through 12 {
+            .offset-l-#{$i}-#{$j} {
+                grid-column: #{$off} / span #{$j}
+            }
+        }
+    }
+
+    
+
+    @media (max-width: 1024px){
+
+        @for $i from 1 through 12 {
+            .cxs-#{$i} { 
+                grid-column: span $i;
+            }
+        }
+
+        @for $i from 1 through 12 {
+            .cs-#{$i} { 
+                grid-column: span $i;
+            }
+        }
+
+        @for $i from 1 through 12 {
+            .cm-#{$i} { 
+                grid-column: span $i;
+            }
+        } 
+
+        @for $i from 1 through 12 {
+            $off: $i + 1;
+            @for $j from 1 through 12 {
+                .offset-xs-#{$i}-#{$j} {
+                    grid-column: #{$off} / span #{$j} 
+                }
+            }
+        }
+    
+        @for $i from 1 through 12 {
+            $off: $i + 1;
+            @for $j from 1 through 12 {
+
+                .offset-s-#{$i}-#{$j} {
+                    grid-column: #{$off} / span #{$j} 
+                }
+            }
+        }
+        @for $i from 1 through 12 {
+            $off: $i + 1;
+            @for $j from 1 through 12 {
+                .offset-m-#{$i}-#{$j} {
+                    grid-column: #{$off} / span #{$j}
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+       
+        @for $i from 1 through 12 {
+            .cxs-#{$i} { 
+                grid-column: span $i;
+            }
+        }
+        @for $i from 1 through 12 {
+            .cs-#{$i} { 
+                grid-column: span $i;
+            }
+        } 
+
+        @for $i from 1 through 12 {
+            $off: $i + 1;
+            @for $j from 1 through 12 {
+                .offset-xs-#{$i}-#{$j} {
+                    grid-column: #{$off} / span #{$j} 
+                }
+            }
+        }
+        @for $i from 1 through 12 {
+            $off: $i + 1;
+            @for $j from 1 through 12 {
+                .offset-s-#{$i}-#{$j} {
+                    grid-column: #{$off} / span #{$j}
+                }
+            }
+        }
+    }
+
+    @media (max-width: 400px){
+
+        
+        @for $i from 1 through 12 {
+            .cxs-#{$i} { 
+                grid-column: span $i;
+            }
+        } 
+        @for $i from 1 through 12 {
+            $off: $i + 1;
+            @for $j from 1 through 12 {
+                .offset-xs-#{$i}-#{$j} {
+                    grid-column: #{$off} / span #{$j}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.menu-lateral {
+    @include posicionamiento-fixed(0,null,0,-240px);
+    background-color: $fd-azul-ve;
+    width: 240px;
+    z-index: superposicion(ml);
+    user-select: none;
+    ul {
+        li{
+            a{
+                display: block;
+                padding: 13px 13px;
+                color: white;
+                font-size: 1.4em;
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.445);
+                }
+                &.desactivado {
+                    color: rgb(175, 175, 175) !important;
+                    &:hover{
+                        background-color: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.complemento {
+    position: absolute;
+    z-index: superposicion(co); ;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}

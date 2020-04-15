@@ -1,0 +1,36 @@
+{
+  "name": "bodystyle",
+  "version": "2.0.0",
+  "description": "v2.0.0 de la librería de estilos CSS BodyStyle",
+  "main": "dist/js/bodystyle.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "files": [
+    "dist/{css,js}/*.{css,js,map}",
+    "src/{modulos}/**/*.{js}",
+    "src/**/*.js",
+    "sass/**/*.scss"
+  ],
+  "keywords": [
+    "librería",
+    "css",
+    "framework",
+    "ui",
+    "sass"
+  ],
+  "author": "Federico Manzano",
+  "license": "MIT",
+  "style": "dist/css/bodystyle.css",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "jquery": "^3.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

@@ -1,0 +1,30 @@
+$tamaños:(
+    xs: 400px,
+    s: 770px,
+    m: 1030px,
+    l: 1200px, /// Mayor 
+);
+
+$superposicion:(
+    ms: 100000, // superposición de los menus superiores
+    ml: 10000,  // superposición de los menus laterales
+    co: 3,      // superposición de los complementos
+    bf: 30000,  // superposición de los complementos
+    dd: 1000000 // superposición de los dropdown
+);
+
+
+@function superposicion($al) {
+    @if map-has-key($superposicion, $al) {
+        @return map-get($superposicion, $al);
+    }@else {
+        @warn "El componente no existe";
+    }
+}
+
+@function dameMedida($med) {
+    @if map-has-key($tamaños, $med) {
+        @return map-get($tamaños, $med);
+    }
+}
+

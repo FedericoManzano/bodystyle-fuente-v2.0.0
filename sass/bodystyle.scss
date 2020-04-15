@@ -1,0 +1,85 @@
+/*!
+ * BodyStyle v1.0.0
+ * Copyright Federico Manzano
+ * Licencia MIT
+ * Repositorio (https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos)
+ */
+
+
+
+//Generales 
+@import "globales";
+@import "generales";
+@import "config";
+@import "mixin-generales";
+@import "iconos";
+@import "screenUtilitarios";
+@import "colores";
+@import "fondos";
+
+//Aliniamiento 
+@import "alineamiento";
+@import "grilla";
+
+//Utilitarios 
+@import "texto";
+@import "css";
+
+//CSS 
+@import "efecto-borde";
+@import "tabla";
+@import "alertas";
+@import "badges";
+@import "efectoTresD";
+@import "decoracionTitulo";
+@import "formas";
+@import "footer";
+@import "conEtiquetados";
+@import "hover";
+@import "breadcrumbs";
+@import "social";
+@import "coleccionesFlotantes";
+@import "sombras";
+
+
+// JS
+@import "dropdown";
+@import "efecto-waves";
+@import "imagenes";
+@import "toolTip";
+@import "toast";
+@import "botonFlotante";
+@import "scroollSpy";
+@import "paralax";
+@import "botonInicio";
+@import "efecto-scroll";
+
+// Componentes
+@import "preloader";
+@import "progressBar";
+@import "botones";
+@import "card";
+@import "modal";
+@import "menu";
+@import "menu-colapso";
+@import "menu-lateral";
+@import "sidebar-barra";
+@import "sidebar-lateral";
+@import "sidebarFija";
+@import "slider";
+@import "colecciones";
+@import "tab";
+
+
+// Formularios
+@import "switch";
+@import "inputText";
+@import "inputRadioCheck";
+@import "inputGrupo";
+@import "select";
+@import "selectModificado";
+@import "formularios";
+@import "range";
+@import "templateFormularios";
+
+

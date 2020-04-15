@@ -1,0 +1,38 @@
+.sidebar-lateral {
+    @include posicionamiento-fixed(0em,null,0,-240px);
+    width: 240px;
+    background-color: $fd-gris-az-o;
+    transition: all 0.5s ease;
+    z-index: superposicion(ms);
+    overflow: auto;
+    font-family: "Roboto", sans-serif;
+    .titulo {
+        color: white;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid black;
+        position: relative;
+    }
+
+    .lista {
+        background-color: $fd-gris-az;
+        li {
+            a {
+                display: block;
+                padding: 10px 15px;
+                color: white;
+                font-size: 0.8em;
+            }
+            a:hover {
+                background-color: rgba(0, 0, 0, 0.418);
+            }
+        }
+    }
+
+    .logo {
+        padding: 0.5em 2em;
+        color: white;
+        background-color: $fd-azul-ve;
+        font-size: 22px;
+    }
+}

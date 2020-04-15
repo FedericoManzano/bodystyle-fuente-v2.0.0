@@ -1,0 +1,234 @@
+@function multiplo5($num){
+    @return $num % 5 == 0;
+}
+
+
+/** Borde radio % y px*/
+@for $i from 1 through 50 {
+    .bor-rad-por-#{$i} {
+        border-radius: 0% + $i !important;
+    }
+}
+
+.bor-negro-trasp {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.055) !important;
+}
+
+.bor-pill {
+    border-radius: 9999px !important;
+}
+
+@for $i from 1 through 300 {
+    .bor-rad-#{$i} {
+        border-radius: 0px + $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-#{$i} {
+        border: 0px + $i solid rgb(0,0,0) !important;
+    }
+}
+/** Bordes rojos */
+@for $i from 1 through 10 {
+    .bor-rojo-#{$i} {
+        border: 0px + $i solid $fd-rojo !important;
+    }
+}
+@for $i from 1 through 10 {
+    .bor-rojo-c-#{$i} {
+        border: 0px + $i solid $fd-rojo-c !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-rojo-t-#{$i} {
+        border: 0px + $i solid $fd-rojo-t !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-rojo-o-#{$i} {
+        border: 0px + $i solid $fd-rojo-o !important;
+    }
+}
+
+/** Bordes rojos verdes*/
+@for $i from 1 through 10 {
+    .bor-verde-#{$i} {
+        border: 0px + $i solid $fd-verde !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-c-#{$i} {
+        border: 0px + $i solid $fd-verde-c !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-o-#{$i} {
+        border: 0px + $i solid $fd-verde-o !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-az-#{$i} {
+        border: 0px + $i solid $fd-verde-az !important;
+    }
+}
+
+/*bordes azules*/
+@for $i from 1 through 10 {
+    .bor-azul-#{$i} {
+        border: 0px + $i solid $fd-azul !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-ve-#{$i} {
+        border: 0px + $i solid $fd-azul-ve !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-c-#{$i} {
+        border: 0px + $i solid $fd-azul-c !important;
+    }
+}
+
+
+@for $i from 1 through 10 {
+    .bor-azul-o-#{$i} {
+        border: 0px + $i solid $fd-azul-o !important;
+    }
+}
+
+
+/** Bordes grises*/
+
+
+@for $i from 1 through 10 {
+    .bor-gris-#{$i} {
+        border: 0px + $i solid $fd-gris !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-gris-n-#{$i} {
+        border: 0px + $i solid $fd-gris-n !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-az-#{$i} {
+        border: 0px + $i solid $fd-gris-az !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-az-o-#{$i} {
+        border: 0px + $i solid $fd-gris-az-o !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-blanco-#{$i} {
+        border: 0px + $i solid white !important;
+    }
+}
+
+
+// Ancho y alto
+@for $i from 1 through 100 {
+    @if(multiplo5($i)){    
+        .ancho-#{$i}{        
+            width: 0% + $i !important; 
+        }
+    }
+}
+@for $i from 1 through 100 {
+    @if(multiplo5($i)){    
+        .alto-#{$i}{        
+            height: 0% + $i !important; 
+        }
+    }
+}
+
+
+@media (max-width: dameMedida(m)){
+    @for $i from 1 through 100 {
+        @if(multiplo5($i)){    
+            .ancho-m-#{$i}{        
+                width: 0% + $i !important; 
+            }
+        }
+    }
+    @for $i from 1 through 100 {
+        @if(multiplo5($i)){    
+            .alto-m-#{$i}{        
+                height: 0% + $i !important; 
+            }
+        }
+    }
+}
+
+@media (max-width: dameMedida(s)){
+    @for $i from 1 through 100 {
+        @if(multiplo5($i)){    
+            .ancho-s-#{$i}{        
+                width: 0% + $i !important; 
+            }
+        }
+    }
+    @for $i from 1 through 100 {
+        @if(multiplo5($i)){    
+            .alto-s-#{$i}{        
+                height: 0% + $i !important; 
+            }
+        }
+    }
+}
+
+@media (max-width: dameMedida(xs)){
+    @for $i from 1 through 100 {
+        @if(multiplo5($i)){    
+            .ancho-xs-#{$i}{        
+                width: 0% + $i !important; 
+            }
+        }
+    }
+    @for $i from 1 through 100 {
+        @if(multiplo5($i)){    
+            .alto-xs-#{$i}{        
+                height: 0% + $i !important; 
+            }
+        }
+    }
+}
+
+
+
+@for $i from 0 through 10 {
+    .opa-#{$i} {
+        opacity: $i / 10;
+    }
+}
+
+
+.divisor{
+    height: 0;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.divisorH {
+    height: 100%;
+    width: 0;
+    min-height: 30px;
+    border-right: 1px solid rgba(0, 0, 0, 0.151);
+    border-radius: 50%;
+    margin: 0 10px;
+}

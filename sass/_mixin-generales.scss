@@ -1,0 +1,84 @@
+@mixin agregar-a-medida-maxima($tam) { 
+    @if map-has-key($tamaños, $tam) {
+        @media (max-width: #{map-get($tamaños, $tam)}) {
+            @content;
+        }
+    }
+  
+    @else {
+      @warn "El tamaño seleccionado no existe";
+    }
+};
+
+@mixin agregar-a-medida-minima($tam) { 
+    @if map-has-key($tamaños, $tam) {
+        @media (min-width: #{map-get($tamaños, $tam)}) {
+            @content;
+        }
+    }
+
+    @else {
+      @warn "El tamaño seleccionado no existe";;
+    }
+};
+
+@mixin flex-box-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-box-centrado-derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-box-centrado-izquierda {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin posicionamiento-absoluto($top, $rigth, $botton, $left) {
+    position: absolute;
+    top: $top;
+    right: $rigth;
+    bottom: $botton;
+    left: $left;
+}
+
+@mixin posicionamiento-fixed($top, $rigth, $botton, $left) {
+    position: fixed;
+    top: $top;
+    right: $rigth;
+    bottom: $botton;
+    left: $left;
+}
+
+@mixin ancho-alto($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+
+@mixin menu() {
+    display: flex;
+    flex-direction: column;
+    padding: 6.7px;
+
+    span {
+        @include ancho-alto(18px, 2px);
+        margin-bottom: 3px;
+        background-color: white;
+        
+    }
+}
+
+@mixin flechas() {
+    position: absolute;
+    @include ancho-alto(0, 0);
+    right: 20px;
+    top: calc(50% - 5px);
+    display: flex;
+}

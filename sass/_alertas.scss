@@ -1,0 +1,119 @@
+.alerta-roja,
+.alerta-azul,
+.alerta-verde,
+.alerta-blanca,
+.alerta-gris ,
+.alerta-negra {
+    display: inline-block;
+    padding: 15px 15px;
+    background-color: rgb(250, 250, 250) !important;
+    border: 1px solid rgb(204, 204, 204) !important;
+    border-radius: 5px;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 500;
+    border-left: 4px solid rgb(0, 80, 185) !important;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.alerta-roja{
+    border-left: 4px solid rgb(185, 0, 0) !important;
+}
+
+.alerta-verde{
+    border-left: 4px solid rgb(14, 126, 102) !important;
+}
+
+.alerta-gris{
+    border-left: 4px solid rgb(51, 51, 51) !important;
+}
+
+.alerta-negra{
+    border-left: 4px solid rgb(0, 0, 0) !important;
+}
+
+.alerta-blanca{
+    border-left: 4px solid rgb(240, 240, 240) !important;
+}
+
+.alerta-op-rojo,
+.alerta-op-verde,
+.alerta-op-azul,
+.alerta-op-negro,
+.alerta-op-blanco,
+.alerta-op-gris {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    border-radius: 3px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+
+.alerta-op-rojo {
+    background-color: rgb(255, 223, 223);
+    border: 1px solid $fd-rojo;
+    color: $fd-rojo;
+}
+
+.alerta-op-verde {
+    background-color: rgb(226, 255, 226);
+    border: 1px solid $fd-verde;
+    color: $fd-verde;
+}
+
+.alerta-op-azul {
+    background-color: rgb(225, 236, 252);
+    border: 1px solid $fd-azul;
+    color: $fd-azul;
+}
+
+.alerta-op-negro {
+    background-color: rgb(212, 212, 212);
+    border: 1px solid $fd-negro;
+    color: $fd-negro;
+}
+
+.alerta-op-gris {
+    background-color: rgb(240, 240, 240);
+    border: 1px solid $fd-gris;
+    color: $fd-gris-o;
+}
+
+.alerta-op-blanco {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid $fd-gris-c;
+    color: $fd-gris-o;
+}
+
+.alerta-cerrar {
+    position: relative;
+    cursor: pointer;
+    &::before, 
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: black;
+        width: 12px;
+        height: 3px;
+        right: 7px;
+        top: 10px;
+        transform:  rotate(45deg);
+    }
+
+    &::after {
+        transform:  rotate(-45deg);
+    }
+}
+  
+  
+  

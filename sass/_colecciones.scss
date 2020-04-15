@@ -1,0 +1,104 @@
+
+
+.lista-contenedor {
+
+    // Bordes
+    $borde: 1px solid rgba(0, 0, 0, 0.123);
+    $borde-radio-cabecera: 5px 5px 0 0;
+    $borde-radio-pie: 0 0 5px 5px;
+
+    display: flex;
+    flex-direction: column;
+    font-size: 16px !important;
+    min-width: 260px;
+
+
+    box-sizing: content-box !important;
+
+    border-radius: 5px;
+    border-top: rgba(0, 0, 0, 0.055);
+    border-bottom: rgba(0, 0, 0, 0.055);
+
+  
+    .lista-cabecera,
+    .lista-pie
+     {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.062);
+        padding: 7px;
+        font-size: 0.9em;
+        border-radius: $borde-radio-cabecera;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.055) !important;
+
+    }
+    
+    .lista-pie{
+        border-radius: $borde-radio-pie;
+        border-top:none !important;
+    }
+
+    
+
+   
+    .lista-item {
+        padding: 7px 10px;
+        font-size: 1.1em;
+        border-bottom: $borde;
+        border-left: $borde;
+        border-right: $borde;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+       
+        
+
+       
+
+
+        &.desactivado *{
+            color: rgb(175, 175, 175) !important;
+
+            &:hover{
+                color: rgb(175, 175, 175) !important;
+            }
+        }
+
+        a {
+            display: block;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.048) !important
+        }
+
+    }
+
+    & .lista-item:first-child {
+        border-top: $borde;
+    }
+
+    .desplegable {
+        background-color: rgba(0, 0, 0, 0.096);
+        font-size: 15px !important;
+        padding: 7px;
+        p {
+            padding: 5px !important;
+            line-height: 22px !important;
+            margin: 0 !important;
+        }
+
+        ul li a {
+            display: block;
+            padding: 5px;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.096);
+            }
+        }
+    }
+}
+
+

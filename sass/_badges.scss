@@ -10,7 +10,6 @@
     vertical-align: auto;
     border-radius: 0.25rem;
     margin-left: 3px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .badge-verde {
@@ -64,7 +63,6 @@
     cursor: pointer;
     user-select: none;
     z-index: 10;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 
     &::before {
         content: "";

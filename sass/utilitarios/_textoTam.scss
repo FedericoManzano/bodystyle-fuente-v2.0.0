@@ -1,0 +1,36 @@
+
+@function multiplo5($num) {
+    @return $num % 5 == 0;
+}
+
+@for $i from 8 through 100 {
+    .fz-#{$i} {
+        font-size: #{$i}px !important;
+    }
+}
+
+
+@media (max-width: dameMedida(m)){
+    @for $i from 8 through 100 {
+        .fz-m-#{$i} {
+            font-size: #{$i}px !important;
+        }
+    }
+}
+
+
+@media (max-width: dameMedida(s)){
+    @for $i from 8 through 100 {
+        .fz-s-#{$i} {
+            font-size: #{$i}px !important;
+        }
+    }
+}
+
+@media (max-width: dameMedida(xs)){
+    @for $i from 8 through 100 {
+        .fz-xs-#{$i} {
+            font-size: #{$i}px !important;
+        }
+    }
+}

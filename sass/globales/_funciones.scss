@@ -44,3 +44,11 @@
 @function multiplo5($num){
     @return $num % 5 == 0;
 }
+
+@function inicializarVariable() {
+    @return 0;
+}
+
+@function incrementar($var) {
+    @return $var + 0.5;
+}

@@ -1,7 +1,6 @@
-////////////////////////////////////////
-// VARIABLES DE TODA LA LIBRERÍA
-//////////////////////////////////////
-///////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+///////////////////////// VARIABLES DE TODA LA LIBRERÍA //////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -13,8 +12,8 @@
 $font-family:       -apple-system, 
                     BlinkMacSystemFont, 
                     "Segoe UI", 
-                    "Roboto", 
-                    "Helvetica Neue", 
+                    Roboto, 
+                    HelveticaNeue, 
                     Arial, 
                     "Noto Sans", 
                     sans-serif, 
@@ -50,7 +49,7 @@ $grosor: (
 );
 
 // ************************************** //
-// ****** COLORES DE FONDO ************** //
+// ********** COLORES DE FONDO ********** //
 // ************************************** //
 
 /*** Tonalidades de rojo***/
@@ -215,4 +214,55 @@ $superposicion:(
             bf: 30000,  // superposición de los complementos
             dd: 1000000 // superposición de los dropdown
 );
+
+
+// ************************************** //
+// ************** ALERTAS *************** //
+// ************************************** //
+
+//**** Alertas Borde Izquierdo
+// Generales
+$alarta-fz:             1,0625em;
+$alerta-padding:        15px;
+$alerta-bg:             rgb(250, 250, 250) !important;
+$alerta-borde:          1px solid rgb(204, 204, 204) !important;
+$alerta-bor-rad:        5px;
+$alerta-lh:             1,5625em;
+$alerta-fw:             300; 
+
+// Individuales
+$alerta-roja-borde:     4px solid $fd-rojo      !important;
+$alerta-azul-borde:     4px solid $fd-azul      !important;
+$alerta-verde-borde:    4px solid $fd-verde     !important;
+$alerta-negra-borde:    4px solid $fd-negro     !important;
+$alerta-blanca-borde:   4px solid $fd-blanco    !important;
+$alerta-gris-borde:     4px solid $fd-gris      !important;
+
+
+//**** Alertas opacas 
+$alerta-op-padding:     15px;
+$alerta-op-fz:          1em;
+$alerta-op-lh:          1,5625em;
+$alerta-op-fw:          300;
+$alerta-op-bor-rad:     3px;
+
+// Alertas Opacas Colores
+$alerta-op-rojo-bg:     rgb(255, 223, 223);
+$alerta-op-rojo-borde:  1px solid $fd-rojo;
+$alerta-op-rojo-color:  $fd-rojo;
+
+
+$alerta-op-azul-bg:     rgb(225, 236, 252);
+$alerta-op-azul-borde:  1px solid $fd-azul;
+$alerta-op-azul-color:  $fd-azul;
+
+
+$alerta-op-verde-bg:     rgb(226, 255, 226);
+$alerta-op-verde-borde:  1px solid $fd-verde;
+$alerta-op-verde-color:  $fd-verde;
+
+$alerta-op-gris-bg:     rgb(240, 240, 240);
+$alerta-op-gris-borde:  1px solid $fd-gris;
+$alerta-op-gris-color:  $fd-gris;
+
 

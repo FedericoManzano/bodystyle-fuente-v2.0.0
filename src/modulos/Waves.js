@@ -6,8 +6,14 @@ import $ from 'jquery'
 (function(){
     const efecto = () => {
         $(".waves").click(function(e){
+            var color = $($(this)).data("color")
             var boton = $(this)
-            var elemento = $("<span class='efecto-waves'></span>")
+            var elemento = null
+            elemento = $("<span class='efecto-waves'></span>")
+            if(color !== undefined && color !== "")
+                $(elemento).addClass(color)
+            
+        
             elemento.css({
                 width: 10,
                 height: 10,

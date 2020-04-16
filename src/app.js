@@ -6,7 +6,7 @@
  * Licencia MIT
  * Repositorio https://github.com/FedericoManzano/bodystyle-pre-compilado-v.1.1.0
  */
-import $ from "jquery"
+import "jquery"
 import MenuResp from "./modulos/MenuSuperior"
 import Modal from "./modulos/Modal"
 import Waves from  "./modulos/Waves"
@@ -23,7 +23,6 @@ import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
 import Slider from "./modulos/Slider"
 import Paralax from "./modulos/Paralax"
-import InputFile from "./modulos/InputFile"
 import BotonInicio from "./modulos/BotonInicio"
 import Alerta from "./modulos/Alerta"
 import Template from "./modulos/Template"
@@ -34,32 +33,19 @@ import Desactivado from "./modulos/Desactivado"
 import Coleccion from "./modulos/Colecciones"
 import ColeccionFlotante from "./modulos/ColeccionFlotante"
 import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
+import InputHandler from "./modulos/InputHandler"
+
 
 (function(window){
     Waves.iniciar()
     MenuColapso.iniciar()
     Range.iniciar()
-    InputFile.iniciar()
     Alerta.iniciar()
     Template.iniciar()
     GruposInput.iniciar()
     Desactivado.iniciar();
+    InputHandler.iniciar()
 
-
-    var focusInput = () => {
-        $(".input-icon input").focus(function() {
-            $(this).parent().css("border", "1px solid rgba(135, 217, 255)")
-            $(this).parent().children(".elemento").css("color", "#212121")
-        })
-
-        $(".input-icon input").blur(function() {
-            $(this).parent().css("border", "1px solid rgb(163, 163, 163)")
-            if($(this).val() === "")
-                $(this).parent().children(".elemento").css("color", "rgb(131, 131, 131)")
-            else 
-                $(this).parent().children(".elemento").css("color", "#212121")
-        })
-    }
     var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
     var ColeccionInit = () => {
@@ -159,7 +145,7 @@ import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
     }
 
 
-    BS = {
+   var BS = {
         MenuSuperior: (config) => MenuSuperior(config),
         ModalInit: (config) => ModalInit(config),
         DropDownInit: (config) => DropDownInit(config),

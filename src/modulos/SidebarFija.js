@@ -59,7 +59,7 @@ import $ from 'jquery'
     var inicializarComponentes = (
         {
             colorFondo="fd-gris-n", 
-            colorFlechas="fff",
+            colorFlechas="#fff",
             colorLogo="c-blanco",
             colorTitulos="c-blanco",
             colorEnlaces="c-blanco",

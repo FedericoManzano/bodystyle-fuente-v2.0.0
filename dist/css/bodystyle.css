@@ -22,7 +22,7 @@
 
 html, body {
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, HelveticaNeue, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 h1, .h1 {
@@ -19963,15 +19963,53 @@ select:focus {
 .select-mod {
   width: 100%;
   border: 1px solid #cfcfcf;
+  background-color: white;
   min-height: 40px;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
   cursor: pointer;
+  position: relative;
+}
+.select-mod::before {
+  content: "";
+  position: absolute;
+  border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: calc(50% - 2.5px);
+  right: 10px;
 }
 .select-mod select {
   display: none;
 }
 .select-mod .select {
   background-color: white;
+}
+.select-mod:focus {
+  border: 1px solid #00f7ff;
+}
+.select-mod .seleccionado {
+  font-size: 18px;
+  height: 100%;
+}
+.select-mod .lista {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border-radius: 3px;
+  background-color: white;
+  top: calc(100% + 5px);
+  left: 0;
+  border: 1px solid #cfcfcf;
+  padding: 10px;
+  z-index: 100000;
+}
+.select-mod .lista ul li option {
+  display: block;
+  width: 100%;
+  padding: 7px 20px;
 }
 
 .form-grupo,

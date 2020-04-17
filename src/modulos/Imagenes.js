@@ -27,8 +27,6 @@ import $ from 'jquery'
         $(window).bind('mousewheel', function(e){ 
             $(".contenedor-imagen").hide() 
         });
-
-        
    }
 
 

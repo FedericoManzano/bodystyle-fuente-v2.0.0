@@ -4,20 +4,82 @@ import $ from 'jquery'
 
     var abierto = 0
     var tiempo = 300
+    
+    // Codigo de error MODULO 24
+    const MODULO = "Error BodyStyle dice: M24"
+
+    // Errores
+    const E1 = `Color background: \n las clases background-color de BodyStyle comienzan con el prefijo (fd-)`
+    const E2 = `Colores hexadecimales: \n los valores hexadecimales de los colores se componen #+valor (A-F0-9) hexadecimal del color`
+    const E3 = `Color textos: \n las clases de BodyStyle comienzan con el prefijo (c-) + color para los textos `
+    const E4 = `Tiempo MS: \n El tiempo en ms debe ser mayor que 0`
+
+
+    var validacionConfiguracion = (
+                colorFondo, 
+                colorFlechas, 
+                colorLogo, 
+                colorTitulos, 
+                colorEnlaces, 
+                tiempoEfecto
+        ) => {
+        if( !(/^fd-./.test(colorFondo)) ){
+            console.error(MODULO + "01 " + E1)
+            return false
+        }
+
+        if( !(/^#([a-f]|[A-F]|[0-9]){3,}$/).test(colorFlechas) ){
+            console.error(MODULO + "02 " + E2)
+            return false
+        }
+
+        if( !(/^c-./).test(colorLogo) ){
+            console.error(MODULO + "03" + E3)
+            return false
+        }
+        if( !(/^c-./).test(colorTitulos) ){
+            console.error(MODULO + "03" + E3)
+            return false
+        }
+
+        if( !(/^c-./).test(colorEnlaces) ){
+            console.error(MODULO + "03" + E3)
+            return false
+        }
+
+        if( tiempoEfecto <= 0 ){
+            console.error(MODULO + "04 " + E4)
+            return false
+        }
+
+        return true
+    }
+
 
     var inicializarComponentes = (
         {
             colorFondo="fd-gris-n", 
-            colorFlechas="#fff",
+            colorFlechas="fff",
             colorLogo="c-blanco",
             colorTitulos="c-blanco",
             colorEnlaces="c-blanco",
             tiempoEfecto=300
         }) => {
-        
+    
+        if(!validacionConfiguracion(colorFondo, 
+                colorFlechas, 
+                colorLogo, 
+                colorTitulos, 
+                colorEnlaces, 
+                tiempoEfecto
+            )){
+            $(".sidebarFija").hide()
+            return 
+        }
+       
         tiempo = tiempoEfecto
         
-
+        
         $(".sidebarFija").addClass(colorFondo)
         $(".sidebarFija .sedebarLogo").addClass(colorLogo)
         $(".sidebarFija .titulo").addClass(colorTitulos)

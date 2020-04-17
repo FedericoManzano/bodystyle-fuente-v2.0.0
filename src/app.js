@@ -34,7 +34,7 @@ import Coleccion from "./modulos/Colecciones"
 import ColeccionFlotante from "./modulos/ColeccionFlotante"
 import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
 import InputHandler from "./modulos/InputHandler"
-
+import Select from "./modulos/Select"
 
 (function(window){
     Waves.iniciar()
@@ -143,6 +143,10 @@ import InputHandler from "./modulos/InputHandler"
         ToolTips.iniciar()
     }
 
+    var SelectInit = () => {
+        return new Select
+    }
+
 
    var BS = {
         MenuSuperior: (config) => MenuSuperior(config),
@@ -165,7 +169,8 @@ import InputHandler from "./modulos/InputHandler"
         DesplegarSidebarFija: () => DesplegarSidebarFija(),
         ColeccionInit: () => ColeccionInit(),
         ColeccionFlotanteInit: () => ColeccionFlotanteInit(),
-        EfectoHoverBordeInit: () => EfectoHoverBordeInit()
+        EfectoHoverBordeInit: () => EfectoHoverBordeInit(),
+        SelectInit: () => SelectInit()
     }
     
     window.BS = BS

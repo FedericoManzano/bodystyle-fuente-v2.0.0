@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import ERR from './Errores'
 
 (function(){
 
@@ -7,12 +8,6 @@ import $ from 'jquery'
     
     // Codigo de error MODULO 24
     const MODULO = "Error BodyStyle dice: M24"
-
-    // Errores
-    const E1 = `Color background: \n las clases background-color de BodyStyle comienzan con el prefijo (fd-)`
-    const E2 = `Colores hexadecimales: \n los valores hexadecimales de los colores se componen #+valor (A-F0-9) hexadecimal del color`
-    const E3 = `Color textos: \n las clases de BodyStyle comienzan con el prefijo (c-) + color para los textos `
-    const E4 = `Tiempo MS: \n El tiempo en ms debe ser mayor que 0`
 
 
     var validacionConfiguracion = (
@@ -23,32 +18,32 @@ import $ from 'jquery'
                 colorEnlaces, 
                 tiempoEfecto
         ) => {
-        if( !(/^fd-./.test(colorFondo)) ){
-            console.error(MODULO + "01 " + E1)
+        if( !(ERR.clasesColorFondo.validacion.test(colorFondo)) ){
+            console.error(MODULO + ERR.clasesColorFondo.mensaje)
             return false
         }
 
-        if( !(/^#([a-f]|[A-F]|[0-9]){3,}$/).test(colorFlechas) ){
-            console.error(MODULO + "02 " + E2)
+        if( !(ERR.hexadecimal.validacion).test(colorFlechas) ){
+            console.error(MODULO + ERR.hexadecimal.mensaje)
             return false
         }
 
-        if( !(/^c-./).test(colorLogo) ){
-            console.error(MODULO + "03" + E3)
+        if( !(ERR.clasesColorTexto.validacion).test(colorLogo) ){
+            console.error(MODULO + ERR.clasesColorTexto.mensaje)
             return false
         }
-        if( !(/^c-./).test(colorTitulos) ){
-            console.error(MODULO + "03" + E3)
-            return false
-        }
-
-        if( !(/^c-./).test(colorEnlaces) ){
-            console.error(MODULO + "03" + E3)
+        if( !(ERR.clasesColorTexto.validacion).test(colorTitulos) ){
+            console.error(MODULO + ERR.clasesColorTexto.mensaje)
             return false
         }
 
-        if( tiempoEfecto <= 0 ){
-            console.error(MODULO + "04 " + E4)
+        if( !(ERR.clasesColorTexto.validacion).test(colorEnlaces) ){
+            console.error(MODULO + ERR.clasesColorTexto.mensaje)
+            return false
+        }
+
+        if( !ERR.positivos.validacion(tiempoEfecto) ){
+            console.error(MODULO + ERR.positivos.mensaje)
             return false
         }
 

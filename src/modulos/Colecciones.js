@@ -70,6 +70,10 @@ class Coleccion {
         $(c.contexto + " .lista-contenedor .desplegable ul li a").addClass(c.colorTexto)
     }
 
+    validarConfig(c){
+
+    }
+
 
     iniciar({contexto,colorFondo, colorTexto, colorFlechas} = {
         contexto: "SinContexto",
@@ -77,6 +81,11 @@ class Coleccion {
         colorTexto: "c-negro",
         colorFlechas: "#000"
     }){
+
+        const MODULO = "Error BodyStyle dice: M04"
+        const E1 = "Contexto erroneo: \n Los ids tienen que accederse"
+
+
         var c = {
             contexto: contexto,
             colorFondo: colorFondo,

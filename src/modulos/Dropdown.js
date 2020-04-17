@@ -1,12 +1,19 @@
 import $ from 'jquery'
+import ERR from './Errores'
 
 (function(){
     
     var presionado = 0;
     const margin = 10
+    const MODULO = "Error BodyStyle dice: M07"
 
     var configurarDropDown = ({color = "#fff"}) => {
         
+        if( !(ERR.hexadecimal.validacion.test(color)) ){
+            console.error(MODULO + ERR.hexadecimal.mensaje)
+            return
+        }
+
         $(".dropdown ul li a").addClass("dd-a")
         $(".dropdown-toggle").append("<span class='f-abajo'></span>")
         $(".dropdown-toggle").append("<span class='f-derecha'></span>")
@@ -112,8 +119,6 @@ import $ from 'jquery'
 
             })
         })
-
-        
     }
 
     var DropDown = {

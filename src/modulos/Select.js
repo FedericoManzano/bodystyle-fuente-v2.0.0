@@ -1,13 +1,12 @@
 import $ from "jquery"
-
+import ERR from "./Errores"
 
 class Select {
     iniciar(contexto){
-
-        var val = /^#./
-
-        if(!val.test(contexto)) {
-            console.error(`El contexto ( ${contexto} ) enviado no posee el formato adecuado \n revise el formato. Todos los ID comienzan con el caracter #`)
+        const MODULO = "Error BodyStyle dice: M20"
+      
+        if(!ERR.id.validacion.test(contexto)) {
+            console.error(MODULO + ERR.id.mensaje)
             return
         }
 

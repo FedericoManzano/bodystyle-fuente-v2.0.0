@@ -3,8 +3,7 @@
     @include flex-box-centrado();
     padding: 0 20px;
     width: 100%;
-    background-color: $fd-azul-ve;
-    min-height: 3.5em;
+    background-color: $fd-gris-n;
     z-index: superposicion(ms); // altura menu superior ms
 }
 
@@ -16,18 +15,19 @@
     li {
         a {
             display: block;
-            padding: 1em 1.3em;
+            padding: 1em;
+            height: 100%;
             color: white;
             cursor: pointer;
-            font-size: 1.2em;
+            font-size: 1.1em;
             &.desactivado {
                 color: rgba(117, 117, 117);
                 &:hover {
-                    background-color: transparent !important;
+                    color: grey;
                 }
             }
             &:hover {
-                background-color: rgba(0, 0, 0, 0.445);
+                color: $fd-gris-c;
             }
         }
         
@@ -71,11 +71,14 @@
 @mixin menu-lateral-boton() {
     display: flex;
     flex-direction: column;
-    padding: 6.7px;
+    align-items: center;
     align-items: flex-end;
+    padding: 1em;
+    cursor: pointer;
+  
     span {
-        @include ancho-alto(18px, 2px);
-        margin-bottom: 3px;
+        @include ancho-alto(22px, 2px);
+        margin-bottom: 5px;
         background-color: white;
     }
     width: 80%;
@@ -98,7 +101,6 @@
 
 .menu {
     @include menu-general();
-    font-family: "HelveticaNeue", "Roboto", Helvetica, sans-serif;
     .menu-logo {
         @include menu-logo();
     }

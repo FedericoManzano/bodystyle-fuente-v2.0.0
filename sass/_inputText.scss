@@ -115,7 +115,6 @@ input[type='url']::placeholder,
 input[type='search']::placeholder,
 textarea::placeholder {
     color: $fd-gris;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 
@@ -136,8 +135,6 @@ textarea::placeholder {
 }
 
 .input-icon {
-
-
     @include configInput();
     position: relative;
     display: flex;
@@ -145,6 +142,9 @@ textarea::placeholder {
     justify-content: space-between;
     height: 2.1em;
     background-color: white;
+
+
+
     input[type='text'], 
     input[type='email'],
     input[type='number'], 
@@ -158,17 +158,11 @@ textarea::placeholder {
         font-size: 1.1em;
         top: 0.25em;
         left: 0;
-
-
         &:focus {
             box-shadow: none !important;
             border: none !important;
         }
-
-        
     }
-
-
     & .elemento:first-child {
         color: rgb(131, 131, 131);
         font-size: 1.1em;
@@ -197,7 +191,6 @@ textarea::placeholder {
 
 .input-cargando {
     background-color: rgb(192, 192, 192) !important;
-
 }
 
 .input-cargando:focus {

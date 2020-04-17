@@ -80,9 +80,9 @@
 }
 
 .alerta-op-negro {
-    background-color: rgb(212, 212, 212);
-    border: 1px solid $fd-negro;
-    color: $fd-negro;
+    background-color: $alerta-op-negro-bg;
+    border: $alerta-op-negro-borde;
+    color: $alerta-op-negro-color;
 }
 
 .alerta-op-gris {
@@ -92,9 +92,9 @@
 }
 
 .alerta-op-blanco {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid $fd-gris-c;
-    color: $fd-gris-o-1;
+    background-color: $alerta-op-blanco-bg;
+    border: $alerta-op-blanco-borde;
+    color: $alerta-op-blanco-color;
 }
 
 .alerta-cerrar {

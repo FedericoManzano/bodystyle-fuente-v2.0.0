@@ -113,7 +113,6 @@ import InputHandler from "./modulos/InputHandler"
         ScrollSpyInit()
         BotonFlotanteInit()
         ImagenesInit()
-        focusInput()
         SliderInit()
         ParalaxInit()
         ToolTipsInit()
@@ -157,7 +156,6 @@ import InputHandler from "./modulos/InputHandler"
         BotonFlotanteInit: (config)=> BotonFlotanteInit(config),
         ImagenesInit: () => ImagenesInit(),
         Deshabilitar: () => Deshabilitar(),
-        FocusInput: () => focusInput(),
         SliderInit: (config) => SliderInit(config),
         ParalaxInit: () => ParalaxInit(),
         BotonInicioInit: () => BotonInicioInit(),

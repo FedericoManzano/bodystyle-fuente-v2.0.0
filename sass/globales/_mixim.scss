@@ -82,3 +82,70 @@
     top: calc(50% - 5px);
     display: flex;
 }
+
+
+
+// ************** Mixim botones ********************* //
+
+@mixin inicializar-botones {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    font-size: 18px;
+    position: relative;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397); 
+    user-select: none;
+    appearance: none;
+    white-space: nowrap; 
+}
+@mixin configuracion-botones() {
+    //Inicializar componentes de html puro
+    border-style: none;
+    outline: none;
+    line-height: 0;
+    box-shadow: none;
+    background: none;
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
+    max-height: unset;
+    display: flex;
+}
+
+@mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw,$fz) {
+    padding: $patb $palr ;
+    min-width: 35px;
+    max-width: 200px !important;
+    max-height: $maxh;
+    min-height: $maxh;
+}
+
+@mixin btn-cubrir ($pbt, $plr, $fz, $display, $w, $m) {
+    padding: $pbt $plr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $w;
+    font-size: $fz;
+    margin:$m;
+}
+
+
+@mixin btn-colores($bg, $color, $fz) {
+    background-color: $bg;
+    color: $color;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    transition: all 0.3s ease;
+}
+
+
+@mixin btn-colores-outline($bgr, $btipo, $bcolor, $color, $fzm) {
+    border: $bgr $btipo $bcolor !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: $color !important;
+    transition: all 0.7s ease;
+}

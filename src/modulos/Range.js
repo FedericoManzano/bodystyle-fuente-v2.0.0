@@ -10,7 +10,6 @@ import $ from 'jquery'
             "linear-gradient(90deg, rgb(0, 187, 156) " + $(this).val() + 
                 "%, rgb(0, 0, 0)"+ $(this).val() + "%)"
             $(this).css("background", gradiente)
-
         })
     }
 

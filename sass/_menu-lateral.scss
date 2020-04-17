@@ -1,6 +1,6 @@
 .menu-lateral {
     @include posicionamiento-fixed(0,null,0,-240px);
-    background-color: $fd-azul-ve;
+    background-color: $fd-gris-n;
     width: 240px;
     z-index: superposicion(ml);
     user-select: none;
@@ -8,9 +8,9 @@
         li{
             a{
                 display: block;
-                padding: 13px 13px;
+                padding: 13px;
                 color: white;
-                font-size: 1.4em;
+                font-size: 1.2em;
                 &:hover{
                     background-color: rgba(0, 0, 0, 0.445);
                 }

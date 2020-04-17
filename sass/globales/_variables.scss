@@ -228,7 +228,7 @@ $alerta-bg:             rgb(250, 250, 250) !important;
 $alerta-borde:          1px solid rgb(204, 204, 204) !important;
 $alerta-bor-rad:        5px;
 $alerta-lh:             1,5625em;
-$alerta-fw:             300; 
+$alerta-fw:             400; 
 
 // Individuales
 $alerta-roja-borde:     4px solid $fd-rojo      !important;
@@ -243,7 +243,7 @@ $alerta-gris-borde:     4px solid $fd-gris      !important;
 $alerta-op-padding:     15px;
 $alerta-op-fz:          1em;
 $alerta-op-lh:          1,5625em;
-$alerta-op-fw:          300;
+$alerta-op-fw:          400;
 $alerta-op-bor-rad:     3px;
 
 // Alertas Opacas Colores
@@ -263,6 +263,13 @@ $alerta-op-verde-color:  $fd-verde;
 
 $alerta-op-gris-bg:     rgb(240, 240, 240);
 $alerta-op-gris-borde:  1px solid $fd-gris;
-$alerta-op-gris-color:  $fd-gris;
+$alerta-op-gris-color:  $fd-gris-o-1;
 
+$alerta-op-blanco-bg:     rgb(255, 255, 255);
+$alerta-op-blanco-borde:  1px solid $fd-gris;
+$alerta-op-blanco-color:  $fd-gris;
+
+$alerta-op-negro-bg:     rgb(212, 212, 212);
+$alerta-op-negro-borde:  1px solid $fd-negro;
+$alerta-op-negro-color:  $fd-negro;
 

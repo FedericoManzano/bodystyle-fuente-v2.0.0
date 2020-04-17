@@ -276,39 +276,6 @@
     }
 }
 
-.badges-parrafo {
-    @include ancho-alto(270px, 120px);
-    display: flex !important;
-    max-width: 270px !important;
-    user-select: none !important;
-    padding: 20px !important;
-    background-color: rgba(245, 245, 245, 0.274) !important;
-    border-radius: 3px !important;
-    cursor: pointer !important;
-    .contenedor-img {
-        padding: 1px !important;
-        overflow: hidden !important;
-        background-color: rgb(19, 61, 88) !important;
-        width: 40% !important;
-        img {
-            height: 100% !important;
-            width: 100% !important;
-        }
-    }
-
-    p {
-        width: 60% !important;
-        display: flex !important;
-        align-items: center !important;
-        margin-left: 5px !important;
-        font-size: 12px !important;
-        color: rgb(22, 22, 22) !important;
-        line-height: 18px !important;
-        background: none !important;
-    }
-}
-
-
 
 .badge-mje-izq,
 .badge-mje-der,
@@ -324,7 +291,6 @@
     border-radius: 5px;
     z-index: 10;
     margin-top: 12px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     background-color: white;
     &::before {
         content: "";
@@ -435,7 +401,6 @@
 .badge-social {
     overflow: hidden;
     display: flex;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     .badge-like {
         background-color: $fd-azul;
         color: white;
@@ -500,7 +465,6 @@
     letter-spacing: 0;
     color: rgb(34, 34, 34);
     position: relative;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:hover {
         background-color: rgba(0, 0, 0, 0.219);
     }
@@ -598,29 +562,24 @@
 .badge-solapa-blanco,
 .badge-solapa-negro,
 .badge-solapa-gris {
-    position: absolute;
+
+    @include posicionamiento-absoluto(30px, null, null, -19px);
+    @include flex-box-centrado();
     padding: 5px 20px;
     padding-left: 30px;
-    @include flex-box-centrado();
     background-color: $fd-rojo;
     display: inline-block;
     font-size: 75%;
     font-weight: 600;
     color: white;
     border-radius: 0 3px 3px 0;
-    top: 30px;
-    left: -19px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &::before {
         content: "";
-        position: absolute;
-        width: 20px;
-        height: 30px;
+        @include posicionamiento-absoluto(null, null, -9px,0);
+        @include ancho-alto(20px, 30px);
         clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
         -webkit-clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
         background-color: $fd-rojo-o-2;
-        left: 0;
-        bottom: -9px;
         z-index: -1;
     }
 }
@@ -664,17 +623,9 @@
 }
 
 .contenedor-relativo {
-
     position:  relative !important;
 }
 
-.ov-hidden {
-    overflow: hidden !important;
-}
-
-.ov-visible {
-    overflow: visible !important;
-}
 
 .badge-esquina-sup-izq-rojo,
 .badge-esquina-sup-izq-verde,
@@ -700,23 +651,15 @@
 .badge-esquina-inf-izq-gris,
 .badge-esquina-inf-izq-blanco,
 .badge-esquina-inf-izq-negro {
-    font-size: 16px;
-    position: absolute;
-    width: 100px;
-    height: 100px;
+    @include posicionamiento-absoluto(-50px, null, null, -50px);
+    @include flex-box-centrado();
+    @include ancho-alto(100px, 100px);
     z-index: 10000;
-    left: -50px;
-    top: -50px;
     transform: rotate(45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.904);
     * {
+        @include posicionamiento-absoluto(45px, null, null, 70px);
         transform: rotate(-45deg);
-        position: absolute;
-        top: 45px;
-        left: 70px;
     }
 }
 
@@ -731,10 +674,8 @@
     background-color: $fd-rojo;
 
     * {
+        @include posicionamiento-absoluto(40px, null, null, 10px);
         transform: rotate(45deg);
-        position: absolute;
-        top: 40px;
-        left: 10px;
     }
 }
 
@@ -750,10 +691,8 @@
     background-color: $fd-rojo;
 
     * {
+        @include posicionamiento-absoluto(40px, null, null, 10px);
         transform: rotate(-45deg);
-        position: absolute;
-        top: 40px;
-        left: 10px;
     }
 }
 
@@ -769,10 +708,8 @@
     background-color: $fd-rojo;
 
     * {
+        @include posicionamiento-absoluto(40px, null, null, 70px);
         transform: rotate(45deg);
-        position: absolute;
-        top: 40px;
-        left: 70px;
     }
 }
 
@@ -895,7 +832,6 @@
     cursor: pointer;
     position: relative;
     user-select: none;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:active {
         background-color: rgb(212, 212, 212);
     }
@@ -966,7 +902,7 @@
     cursor: pointer;
     user-select: none;
     box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+
     &:hover {
         background-color: $fd-rojo-o-1;
     }
@@ -1052,7 +988,6 @@
     font-weight: 600;
     cursor: pointer;
     user-select: none;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 
@@ -1094,8 +1029,6 @@
     color: white;
     user-select: none;
     cursor: pointer;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-
     &:hover {
         background-color: rgb(170, 31, 31);
     }
@@ -1134,7 +1067,6 @@
     position: absolute !important;
     top: -10px !important;
     right: 5px !important;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 

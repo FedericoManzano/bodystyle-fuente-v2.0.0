@@ -11,9 +11,9 @@ import $ from 'jquery'
     var scroll = () => {
         $(window).scroll(function(){
             if($(this).scrollTop() > 100){
-                $(boton).show() 
+                $(boton).show(200) 
             }else {
-                $(boton).hide()
+                $(boton).hide(200)
             }
         })
     }
@@ -21,7 +21,11 @@ import $ from 'jquery'
 
     var activar = () => {
         $(boton).click(function(){
-            $(window).scrollTop(0)
+     
+            $("html, body").animate({
+                scrollTop: 0
+            }, 300)
+         
         })
     }
     var BotonInicio =  {

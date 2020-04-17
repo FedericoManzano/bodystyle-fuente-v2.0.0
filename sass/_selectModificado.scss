@@ -30,11 +30,17 @@
     }
 
     .seleccionado {
-        
         font-size: 18px;
         height: 100%;
     }
-    .lista {
+
+    .inactivo {
+        color: $fd-gris !important;
+    }
+
+
+    .lista,
+    .lista-borde {
         display: none;
         position: absolute;
         width: 100%;
@@ -43,7 +49,7 @@
         top: calc(100% + 5px);
         left: 0;
         border: 1px solid rgb(207, 207, 207);
-        padding: 10px;
+  
         z-index: 100000;
         ul {
             li {
@@ -51,6 +57,14 @@
                     display: block;
                     width: 100%;
                     padding: 7px 20px;
+                }
+            }
+
+            .hover {
+
+                &:hover {
+                    background-color: $fd-azul-c;
+                    color: white;
                 }
             }
         }

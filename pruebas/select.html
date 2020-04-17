@@ -10,6 +10,7 @@
     <div class="contenedor mar-3">
         <div id="select" class="select-mod">
             <select name="select">
+                <option class="inactivo" value="1">Seleccione un nombre ...</option>
                 <option value="1">Federico</option>
                 <option value="2">Marcos</option>
                 <option value="3">Carlos</option>
@@ -19,7 +20,7 @@
     </div>
    
     <script src="../dist/js/bodystyle.js"></script>
-    <script>BS.SelectInit().iniciar("#select")
+    <script>BS.SelectInit().iniciar("#select", "fondo")
   </script>
 </body>
 </html>

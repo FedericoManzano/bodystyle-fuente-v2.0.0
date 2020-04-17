@@ -19994,7 +19994,11 @@ select:focus {
   font-size: 18px;
   height: 100%;
 }
-.select-mod .lista {
+.select-mod .inactivo {
+  color: gray !important;
+}
+.select-mod .lista,
+.select-mod .lista-borde {
   display: none;
   position: absolute;
   width: 100%;
@@ -20003,13 +20007,18 @@ select:focus {
   top: calc(100% + 5px);
   left: 0;
   border: 1px solid #cfcfcf;
-  padding: 10px;
   z-index: 100000;
 }
-.select-mod .lista ul li option {
+.select-mod .lista ul li option,
+.select-mod .lista-borde ul li option {
   display: block;
   width: 100%;
   padding: 7px 20px;
+}
+.select-mod .lista ul .hover:hover,
+.select-mod .lista-borde ul .hover:hover {
+  background-color: #006cff;
+  color: white;
 }
 
 .form-grupo,

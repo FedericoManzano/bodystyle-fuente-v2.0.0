@@ -1,5 +1,5 @@
 import $ from 'jquery'
-
+import ERR from './Errores'
 
 class ColeccionFlotante {
 
@@ -46,10 +46,34 @@ class ColeccionFlotante {
             $(this).hide()
             $(c.contexto + " .lista-float-izq .cerrar").show()
         })
-
-
     }
 
+    validarColeecion(c) {
+        const MODULO = "Error BodyStyle dice: M05"
+        if(!ERR.id.validar.test(c.contexto)){
+            console.error(MODULO + ERR.id.mensaje)
+            return false
+        }
+
+
+        if(!ERR.clasesColorFondo.validar.test(c.fondoItem)){
+            console.error(MODULO + ERR.clasesColorFondo.mensaje)
+            return false
+        }
+
+
+        if(!ERR.clasesColorTexto.validar.test(c.colorTexto)){
+            console.error(MODULO + ERR.clasesColorTexto.mensaje)
+            return false
+        }
+
+        if(!ERR.positivo.validar(c.altura)){
+            console.error(MODULO + ERR.positivo.mensaje)
+            return false
+        }
+
+        return true
+    }
 
 
     iniciar({contexto="vacio", fondoItem="fd-gris-az-o", colorTexto="c-blanco", altura = 100}) {
@@ -60,7 +84,9 @@ class ColeccionFlotante {
             colorTexto,
             altura
         }
-
+        if(!this.validarColeecion(c))
+            return
+            
         this.inicializarElemento(c)
     }
 }

@@ -116,7 +116,6 @@ import ERR from './Errores'
                     $(".drop").hide()
                     presionado = 0 
                 }
-
             })
         })
     }

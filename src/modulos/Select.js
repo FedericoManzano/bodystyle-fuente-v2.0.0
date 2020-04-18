@@ -2,8 +2,6 @@ import $ from "jquery"
 import ERR from "./Errores"
 
 class Select {
-
-
     inicializar(contexto, efecto){
         const MODULO = "Error BodyStyle dice: M20"
       
@@ -71,6 +69,9 @@ class Select {
             case "fondo": 
                 this.inicializar(contexto, "hover")
             break;
+            default: 
+                const MODULO = "Error BodyStyle dice: M20"
+                console.error(MODULO + ERR.hover.mensaje)
         }
     }
 }

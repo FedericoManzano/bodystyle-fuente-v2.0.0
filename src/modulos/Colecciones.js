@@ -1,6 +1,6 @@
 
 import $ from 'jquery'
-
+import ERR from "./Errores"
 
 class Coleccion {
    
@@ -71,6 +71,27 @@ class Coleccion {
     }
 
     validarConfig(c){
+        const MODULO = "Error bodystyle dice: M03"
+        if(!ERR.id.validar.test(c.contexto)){
+            console.log(MODULO + ERR.id.mensaje)
+            return false
+        }
+        if(!ERR.clasesColorFondo.validar.test(c.coloFondo)){
+            console.log(MODULO + ERR.clasesColorFondo.mensaje)
+            return false
+        }
+
+        if(!ERR.clasesColorTexto.validar.test(c.colorTexto)){
+            console.log(MODULO + ERR.clasesColorTexto.mensaje)
+            return false
+        }
+
+        if(!ERR.hexadecimal.validar.test(c.colorFlechas)){
+            console.log(MODULO + ERR.hexadecimal.mensaje)
+            return false
+        }
+
+        return true
 
     }
 
@@ -82,16 +103,16 @@ class Coleccion {
         colorFlechas: "#000"
     }){
 
-        const MODULO = "Error BodyStyle dice: M04"
-        const E1 = "Contexto erroneo: \n Los ids tienen que accederse"
-
-
         var c = {
             contexto: contexto,
             colorFondo: colorFondo,
             colorTexto: colorTexto,
             colorFlechas: colorFlechas
         }
+
+        if(!this.validarConfig(c)){
+            return
+        }   
 
         this.cargarConfiguracion(c)
         this.acordeon(c)

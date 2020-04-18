@@ -20,6 +20,10 @@
         positivos: {
             validacion: (val) => val > 0,
             mensaje: "05 Numero negativo: \n revise el valor entero ingresado ya que el parametro solicitado debe ser + mayor que 0"
+        },
+
+        hover: {
+            mensaje: "06 Efecto hover erroneo: \n Los valores posibles para el efecto hover del componente select son {none|borde|fondo}"
         }
     }
 

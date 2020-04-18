@@ -6,10 +6,11 @@ import $ from "jquery"
         var elemento = $("<span class='archivo-seleccionado'>Seleccionar un archivo ...</span>")
         $(".f-label").append(elemento)
 
-        $(".form-grupo input").prop("required", true).each(function(){
+        $(".form-grupo input").each(function(){
             $(this).blur(function(){
-                if($(this).val() === "")
-                    $(this).addClass("i-error")
+                if($(this).attr("required") !== undefined)
+                    if($(this).val() === "")
+                        $(this).addClass("i-error")
             })
 
             $(this).focus(function(){
@@ -17,10 +18,11 @@ import $ from "jquery"
             })
         })
 
-        $(".tem-input input").prop("required", true).each(function(){
+        $(".tem-input input").each(function(){
             $(this).blur(function(){
-                if($(this).val() === "")
-                    $(this).parent(".tem-input").addClass("tem-error")
+                if($(this).attr("required") !== undefined)
+                    if($(this).val() === "")
+                        $(this).parent(".tem-input").addClass("tem-error")
             })
 
             $(this).focus(function(){
@@ -28,15 +30,18 @@ import $ from "jquery"
             })
         })
 
-        $(".input-icon input").prop("required", true).each(function(){
+        $(".input-icon input").each(function(){
+            
             $(this).blur(function(){
                 $(this).parent().css("border", "1px solid rgb(163, 163, 163)")
-                if($(this).val() === "")
-                    $(this).parent().children(".elemento").css("color", "rgb(131, 131, 131)")
-                else 
-                    $(this).parent().children(".elemento").css("color", "#212121")
-                if($(this).val() === "")
-                    $(this).parent(".input-icon").addClass("i-error")
+                    if($(this).val() === "")
+                        $(this).parent().children(".elemento").css("color", "rgb(131, 131, 131)")
+                    else 
+                         $(this).parent().children(".elemento").css("color", "#212121")
+                if($(this).attr("required") !== undefined){
+                    if($(this).val() === "")
+                        $(this).parent(".input-icon").addClass("i-error")
+                }
             })
 
             $(this).focus(function(){

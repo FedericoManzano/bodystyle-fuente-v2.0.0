@@ -20,21 +20,23 @@
 
 .menu-colapso-contenedor {
     padding: 30px;
-    border-bottom: 1px solid rgb(218, 218, 218);
-    background-color: rgb(247, 247, 247);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    background-color: $fd-gris-az;
     opacity: 0;
     span {
-        font-size: 1.2em;
+        font-size: 1.4em;
         font-weight: 600;
     }
     ul {
         li {
             a{
                 display: block;
-                color: #212121;
-                padding: 3px 7px;
+                color: $fd-blanco;
+                padding: 8px 10px;
+                font-size: 1.1em;
+             
                 &:hover {
-                    color: $fd-azul;
+                    color: $fd-azul-c;
                 }
                 &.desactivado {
                     color: rgb(175, 175, 175) !important;

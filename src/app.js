@@ -35,6 +35,7 @@ import ColeccionFlotante from "./modulos/ColeccionFlotante"
 import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
 import InputHandler from "./modulos/InputHandler"
 import Select from "./modulos/Select"
+import Contenedores from "./modulos/Contenedores"
 
 (function(window){
     Waves.iniciar()
@@ -45,7 +46,9 @@ import Select from "./modulos/Select"
     GruposInput.iniciar()
     Desactivado.iniciar();
     InputHandler.iniciar()
+    Contenedores.iniciar()
 
+    
     var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
     var ColeccionInit = () => {

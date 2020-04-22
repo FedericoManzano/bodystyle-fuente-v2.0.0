@@ -46,9 +46,11 @@ import Contenedores from "./modulos/Contenedores"
     GruposInput.iniciar()
     Desactivado.iniciar();
     InputHandler.iniciar()
-    Contenedores.iniciar()
-
     
+
+    var ContenedoresInit = () => Contenedores.iniciar()
+
+
     var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
     var ColeccionInit = () => {
@@ -173,7 +175,8 @@ import Contenedores from "./modulos/Contenedores"
         ColeccionInit: () => ColeccionInit(),
         ColeccionFlotanteInit: () => ColeccionFlotanteInit(),
         EfectoHoverBordeInit: () => EfectoHoverBordeInit(),
-        SelectInit: () => SelectInit()
+        SelectInit: () => SelectInit(),
+        ContenedoresInit: () => ContenedoresInit()
     }
     
     window.BS = BS

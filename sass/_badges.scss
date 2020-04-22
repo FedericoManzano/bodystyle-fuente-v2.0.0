@@ -2,64 +2,68 @@
 .badge {
     display: inline-block;
     padding: 0.25em 0.4em;
-    font-size: 75%;
-    font-weight: 700;
+    font-size: $b-fz;
+    font-weight: $b-grosor;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
     vertical-align: auto;
-    border-radius: 0.25rem;
+    border-radius: $b-bor-rad;
     margin-left: 3px;
 }
 
 .badge-verde {
-    background-color: rgb(30, 190, 142);
+    background-color: $b-verde;
     color: white;
 }
 
 .badge-rojo {
-    background-color: rgb(212, 28, 28);
+    background-color: $b-rojo;
     color: white;
 }
 
 .badge-gris {
-    background-color: rgb(63, 63, 63);
+    background-color: $b-gris;
     color: white
 }
 
 .badge-azul {
-    background-color: rgb(0, 71, 153);
+    background-color: $b-azul;
     color: white
 }
 
 .badge-negro {
-    background-color: rgb(0, 0, 0);
+    background-color: $b-negro;
     color: white
 }
 
 .badge-blanco {
-    background-color: rgb(255, 255, 255);
+    background-color: $b-blanco;
     color: rgb(0, 0, 0)
 }
+
 
 .b-redondo {
     border-radius: 50%;
 }
 
 
+
 .badges-etiqueta,
 .badges-etiqueta-sm,
 .badges-etiqueta-lg{
-    font-size: 14px;
-    padding: 5px 11px;
-    height: 30px;
-    min-width: 170px;
-    max-width: 200px;
+
     display: inline-block;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-box-centrado();
+
+    font-size: $b-etiqueta-fz;
+    padding: 5px 11px;
+    height: $b-etiqueta-altura;
+    min-width: $b-etiqueta-minw;
+    max-width: $b-etiqueta-maxw;
+    
+    
     cursor: pointer;
     user-select: none;
     z-index: 10;
@@ -88,6 +92,7 @@
         z-index: 4;
     }
 }
+
 
 
 .badges-etiqueta-lg {
@@ -154,125 +159,127 @@
 .badges-etiqueta-gris,
 .badges-etiqueta-negro,
 .badges-etiqueta-blanco{
-    font-weight: 600;
+    font-weight: $b-etiqueta-fw;
     text-align: center;
     border-radius: 0 5px 5px 0;
-    background-color: red;
+    background-color: $b-etiqueta-rojo;
     color: white;
 
 
     &:hover {
-        background-color: rgb(201, 0, 0);
+        background-color: $b-etiqueta-rojo-h;
     }
 
     &:hover::before {
-        background-color: rgb(201, 0, 0);
+        background-color: $b-etiqueta-rojo-h;
     }
 
 
     &::before {
         content: "";
-        background-color: red;
+        background-color: $b-etiqueta-rojo;
         z-index: 2;
     }
-
-    
 }
+
 
 
 .badges-etiqueta-verde {
-    background-color: rgb(0, 109, 94);
+    background-color: $b-etiqueta-verde;
 
     &::before {
         content: "";
-        background-color: rgb(0, 109, 94);
+        background-color: $b-etiqueta-verde;
         
     }
 
 
     &:hover {
-        background-color: rgb(0, 77, 66);
+        background-color: $b-etiqueta-verde;
     }
 
 
     &:hover::before {
-        background-color: rgb(0, 77, 66);
+        background-color: $b-etiqueta-verde-h;
     }
 }
-
 
 .badges-etiqueta-azul {
-    background-color: rgb(34, 72, 145);
+    background-color: $b-etiqueta-azul;
 
     &::before {
         content: "";
-        background-color: rgb(34, 72, 145);
+        background-color: $b-etiqueta-azul;
         
     }
 
 
     &:hover {
-        background-color: rgb(16, 44, 95);
+        background-color: $b-etiqueta-azul-h;
     }
 
 
     &:hover::before {
-        background-color: rgb(16, 44, 95);
+        background-color: $b-etiqueta-azul-h;
     }
 }
 
+
 .badges-etiqueta-negro {
-    background-color: rgb(0, 0, 0);
+    background-color: $b-etiqueta-negro;
 
     &::before {
         content: "";
-        background-color: rgb(0, 0, 0);
+        background-color: $b-etiqueta-negro;
         
     }
 
 
     &:hover {
-        background-color: rgb(29, 29, 29);
+        background-color: $b-etiqueta-negro-h;
     }
 
 
     &:hover::before {
-        background-color: rgb(29, 29, 29);
+        background-color: $b-etiqueta-negro-h;
     }
 }
 
 .badges-etiqueta-blanco {
-    background-color: rgb(255, 255, 255);
+    background-color: $b-etiqueta-blanco;
     color: black;
     &::before {
         content: "";
-        background-color: rgb(255, 255, 255);
+        background-color: $b-etiqueta-blanco;
         
     }
 
 
     &:hover {
-        background-color: rgb(228, 228, 228);
+        background-color: $b-etiqueta-blanco-h;
     }
 
 
     &:hover::before {
-        background-color: rgb(228, 228, 228);
+        background-color: $b-etiqueta-blanco-h;
     }
 }
 
+
+
+
 .badges-etiqueta-gris {
-    background-color: rgb(231, 231, 231);
+    background-color: $b-etiqueta-gris;
     color: black;
     &::before {
         content: "";
-        background-color: rgb(231, 231, 231);
+        background-color: $b-etiqueta-gris;
     }
     &:hover {
-        background-color: rgb(196, 196, 196);
+        background-color: $b-etiqueta-gris-h;
     }
     &:hover::before {
-        background-color: rgb(196, 196, 196);
+        background-color: $b-etiqueta-gris-h;
     }
 }
 

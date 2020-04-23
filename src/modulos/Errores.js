@@ -1,7 +1,7 @@
 (function(){
     const ERR = {
         clasesColorFondo: {
-            validacion: /^fd-./,
+            validacion: /^(fd-.+)/,
             mensaje: "01 Error color de fondo: \n Las clases background-color comienzan con el prefijo fd-"
         },
         hexadecimal: {

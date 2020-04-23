@@ -50,25 +50,25 @@ class ColeccionFlotante {
 
     validarColeecion(c) {
         const MODULO = "Error BodyStyle dice: M05"
-        if(!ERR.id.validar.test(c.contexto)){
+        if(!ERR.id.validacion.test(c.contexto)){
             console.error(MODULO + ERR.id.mensaje)
             return false
         }
 
 
-        if(!ERR.clasesColorFondo.validar.test(c.fondoItem)){
+        if(!ERR.clasesColorFondo.validacion.test(c.fondoItem)){
             console.error(MODULO + ERR.clasesColorFondo.mensaje)
             return false
         }
 
 
-        if(!ERR.clasesColorTexto.validar.test(c.colorTexto)){
+        if(!ERR.clasesColorTexto.validacion.test(c.colorTexto)){
             console.error(MODULO + ERR.clasesColorTexto.mensaje)
             return false
         }
 
-        if(!ERR.positivo.validar(c.altura)){
-            console.error(MODULO + ERR.positivo.mensaje)
+        if(!ERR.positivos.validacion(c.altura)){
+            console.error(MODULO + ERR.positivos.mensaje)
             return false
         }
 

@@ -72,21 +72,22 @@ class Coleccion {
 
     validarConfig(c){
         const MODULO = "Error bodystyle dice: M03"
-        if(!ERR.id.validar.test(c.contexto)){
+        if(!ERR.id.validacion.test(c.contexto)){
             console.log(MODULO + ERR.id.mensaje)
             return false
         }
-        if(!ERR.clasesColorFondo.validar.test(c.coloFondo)){
+
+        if(!ERR.clasesColorFondo.validacion.test(c.colorFondo)){
             console.log(MODULO + ERR.clasesColorFondo.mensaje)
             return false
         }
 
-        if(!ERR.clasesColorTexto.validar.test(c.colorTexto)){
+        if(!ERR.clasesColorTexto.validacion.test(c.colorTexto)){
             console.log(MODULO + ERR.clasesColorTexto.mensaje)
             return false
         }
 
-        if(!ERR.hexadecimal.validar.test(c.colorFlechas)){
+        if(!ERR.hexadecimal.validacion.test(c.colorFlechas)){
             console.log(MODULO + ERR.hexadecimal.mensaje)
             return false
         }
@@ -96,12 +97,7 @@ class Coleccion {
     }
 
 
-    iniciar({contexto,colorFondo, colorTexto, colorFlechas} = {
-        contexto: "SinContexto",
-        colorFondo: "fd-blanco",
-        colorTexto: "c-negro",
-        colorFlechas: "#000"
-    }){
+    iniciar({contexto = "SinContexto",colorFondo = "fd-blanco", colorTexto = "c-negro", colorFlechas = "#000"}){
 
         var c = {
             contexto: contexto,
@@ -109,7 +105,6 @@ class Coleccion {
             colorTexto: colorTexto,
             colorFlechas: colorFlechas
         }
-
         if(!this.validarConfig(c)){
             return
         }   

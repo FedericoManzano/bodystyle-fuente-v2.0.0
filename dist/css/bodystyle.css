@@ -15159,7 +15159,6 @@ table,
   border-collapse: collapse;
   border: none;
   width: 100%;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .centrada {
@@ -20244,13 +20243,14 @@ input.btn-cubrir-lg-o {
 .lista-contenedor .lista-item {
   padding: 7px 10px;
   font-size: 1.1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
-  border-left: 1px solid rgba(0, 0, 0, 0.123);
-  border-right: 1px solid rgba(0, 0, 0, 0.123);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   position: relative;
   cursor: pointer;
+  background-color: white;
 }
 .lista-contenedor .lista-item.desactivado * {
   color: #afafaf !important;
@@ -20260,14 +20260,14 @@ input.btn-cubrir-lg-o {
 }
 .lista-contenedor .lista-item a {
   display: block;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 15px;
+  color: black;
 }
 .lista-contenedor .lista-item:hover {
   background-color: rgba(0, 0, 0, 0.048) !important;
 }
 .lista-contenedor .lista-item:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.123);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 .lista-contenedor .desplegable {
   background-color: rgba(0, 0, 0, 0.096);

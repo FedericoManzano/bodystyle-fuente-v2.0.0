@@ -2,7 +2,6 @@
     width: 100%;
     min-height: 3em;
     max-height: 3.5em;
-    position: fixed;
     @include posicionamiento-fixed(0,0,null,0);
     display: flex;
     align-items: center;

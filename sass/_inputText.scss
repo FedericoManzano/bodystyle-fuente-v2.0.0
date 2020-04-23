@@ -4,21 +4,6 @@
     que la informacion del campo es erronea
 */
 
-
-@mixin configInput() {
-    outline: none;
-    height: 2.1em;
-    width: 100%;
-    border: 1px solid $gris-input;
-    padding: 0.6em;
-    border-radius: 3px;
-    font-size: 1.1em;
-    font-family: "Roboto", Helvetica, sans-serif;
-    transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-}
-
 input[type='text'], 
 input[type='email'],
 input[type='number'],
@@ -26,6 +11,7 @@ input[type='password'],
 input[type='url'],
 input[type='search'], 
 textarea{
+    // sass/globales/mixim
     @include configInput();
 
     &.desactivado {

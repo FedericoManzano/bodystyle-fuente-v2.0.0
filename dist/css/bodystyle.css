@@ -18725,7 +18725,7 @@ table tbody tr td {
 }
 
 .img-responsive {
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 .tips {
@@ -18742,7 +18742,6 @@ table tbody tr td {
   max-height: 40px !important;
   min-height: 40px !important;
   z-index: 100000 !important;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
   transform: translate(0);
   transition: transform 0.3s ease;
 }
@@ -18889,6 +18888,29 @@ table tbody tr td {
   background-color: #006cff;
   position: absolute;
   left: 0;
+}
+
+.scroll-spy {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 15%;
+}
+.scroll-spy .titulo {
+  font-size: 1em;
+  color: black;
+  font-weight: 500;
+}
+.scroll-spy .lista li a {
+  display: block;
+  padding: 3px 0 3px 15px;
+  color: grey;
+}
+.scroll-spy .lista li a:hover {
+  color: black;
+}
+.scroll-spy .lista li .seleccionado {
+  color: black;
 }
 
 .paralax-contenedor {
@@ -19982,7 +20004,6 @@ input.btn-cubrir-lg-o {
   min-height: 3em;
   max-height: 3.5em;
   position: fixed;
-  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -20016,7 +20037,6 @@ input.btn-cubrir-lg-o {
   transition: all 0.5s ease;
   z-index: 100000;
   overflow: auto;
-  font-family: "Roboto", sans-serif;
 }
 .sidebar-lateral .titulo {
   color: white;
@@ -20485,7 +20505,6 @@ textarea {
   padding: 0.6em;
   border-radius: 3px;
   font-size: 1.1em;
-  font-family: "Roboto", Helvetica, sans-serif;
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -20606,7 +20625,6 @@ textarea::placeholder {
   padding: 0.6em;
   border-radius: 3px;
   font-size: 1.1em;
-  font-family: "Roboto", Helvetica, sans-serif;
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -20990,7 +21008,6 @@ textarea::placeholder {
 
 .input-g {
   font-size: 16px;
-  font-family: "HelveticaNeue", "Roboto", Helvetica, sans-serif;
 }
 .input-g input[type=text],
 .input-g input[type=email],
@@ -21387,7 +21404,7 @@ select:focus {
   top: calc(100% + 5px);
   left: 0;
   border: 1px solid #cfcfcf;
-  z-index: 100000;
+  z-index: 10000000000;
 }
 .select-mod .lista ul li option,
 .select-mod .lista-borde ul li option {

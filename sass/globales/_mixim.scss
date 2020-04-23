@@ -149,3 +149,122 @@
     color: $color !important;
     transition: all 0.7s ease;
 }
+
+
+// ********* Mixim Input ********* //
+@mixin configInput() {
+    outline: none;
+    height: 2.1em;
+    width: 100%;
+    border: 1px solid $gris-input;
+    padding: 0.6em;
+    border-radius: 3px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+
+// ************** Menú ************ //
+
+
+@mixin menu-general {
+    @include flex-box-centrado();
+    padding: 0 20px;
+    width: 100%;
+    background-color: $fd-gris-n;
+    z-index: superposicion(ms); // altura menu superior ms
+}
+
+
+@mixin menu-lista {
+    @include flex-box-centrado-izquierda();
+    width: 80%;
+    
+    li {
+        a {
+            display: block;
+            padding: 1em;
+            height: 100%;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1em;
+            &.desactivado {
+                color: rgba(117, 117, 117);
+                &:hover {
+                    color: grey;
+                }
+            }
+            &:hover {
+                color: $fd-gris-c;
+            }
+        }
+        
+    }
+}
+
+@mixin  menu-ext {
+    background-color: white;
+    display: block;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.212);
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+            min-width:100px ;
+            a {
+                display: flex;
+                flex-direction: column;
+                color: rgb(78, 78, 78);
+                text-align: center;
+                padding: 10px 0;
+                &:hover {
+                    color: black;
+                }
+
+                & span:first-child {
+                    font-size: 30px;
+                    margin-bottom: 7px;
+                }
+                & span:last-child {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin menu-lateral-boton() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-end;
+    padding: 1em;
+    cursor: pointer;
+  
+    span {
+        @include ancho-alto(22px, 2px);
+        margin-bottom: 5px;
+        background-color: white;
+    }
+    width: 80%;
+    color: white;
+    
+    @include agregar-a-medida-minima(m){
+        display: none !important;
+    }
+    z-index: 100000000;
+}
+
+@mixin menu-logo {
+    @include flex-box-centrado();
+    width: 10%;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: auto;
+    color: white;
+}

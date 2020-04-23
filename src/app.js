@@ -1,10 +1,10 @@
 
 
 /*!
- * BodyStyle v1.1.0
+ * BodyStyle v2.0.0
  * Copyright Federico Manzano
  * Licencia MIT
- * Repositorio https://github.com/FedericoManzano/bodystyle-pre-compilado-v.1.1.0
+ * Repositorio (https://github.com/FedericoManzano/bodystyle-fuente-v2.0.0)
  */
 import "jquery"
 import MenuResp from "./modulos/MenuSuperior"
@@ -115,8 +115,8 @@ import Contenedores from "./modulos/Contenedores"
         ModalInit()
         DropDownInit({})
         SidebarFijaInit({}) // Sidebar fija
-        ScrollSpyInit()
-        BotonFlotanteInit()
+        ScrollSpyInit({})
+        BotonFlotanteInit({})
         ImagenesInit()
         SliderInit()
         ParalaxInit()

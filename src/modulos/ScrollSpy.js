@@ -1,4 +1,6 @@
 import $ from 'jquery'
+import ERR from "./Errores"
+
 
 (function() {
 
@@ -6,28 +8,81 @@ import $ from 'jquery'
     var cantidad = $(".scroll-item").length;
     var ids = new Array(cantidad)
 
-    var inicializarIds = 
-    ({
+
+    const validarListaScroll = ( 
+        modulo, 
         ancho, 
         tamFuente, 
-        colorBorde,
+        colorBorde, 
         alturaBorde, 
         separacion, 
         colorSeleccionado, 
-        colorNoSeleccionado
-    } = {
-        ancho: "15%",
-        tamFuente: 18,
-        colorBorde: "fd-azul-c",
-        alturaBorde: 30,
-        separacion: 120,
-        colorSeleccionado: "#000",
-        colorNoSeleccionado: "#666"
-    
+        colorNoSeleccionado 
+    ) => {
+
+
+        if(!ERR.positivos.validacion(ancho)){
+            console.error(modulo + ERR.positivos.mensaje)
+            return false
+        }
+
+        if(!ERR.positivos.validacion(tamFuente)){
+            console.error(modulo + ERR.positivos.mensaje)
+            return false
+        }
+
+
+        if(!ERR.clasesColorFondo.validacion.test(colorBorde)){
+            console.error(modulo + ERR.clasesColorFondo.mensaje)
+            return false
+        }
+
+        if(!ERR.positivos.validacion(alturaBorde)){
+            console.error(modulo + ERR.positivos.mensaje)
+            return false
+        }
+
+        if(!ERR.positivos.validacion(separacion)){
+            console.error(modulo + ERR.separacion.mensaje)
+            return false
+        }
+
+        if(!ERR.hexadecimal.validacion.test(colorSeleccionado)){
+            console.error(modulo + ERR.hexadecimal.mensaje)
+            return false
+        }
+
+        if(!ERR.hexadecimal.validacion.test(colorNoSeleccionado)){
+            console.error(modulo + ERR.hexadecimal.mensaje)
+            return false
+        }
+
+        return true
+    }
+
+
+
+    var inicializarIds = 
+    ({
+        ancho = 15, 
+        tamFuente = 18, 
+        colorBorde = "fd-azul-c",
+        alturaBorde = 30, 
+        separacion = 120, 
+        colorSeleccionado = "#000", 
+        colorNoSeleccionado = "#666"
     }) => {
+
+
+    const MODULO = "Error BodyStyle dice: M21" 
+    if(!validarListaScroll(MODULO, ancho, tamFuente, colorBorde, alturaBorde, separacion, colorSeleccionado, colorNoSeleccionado)) {
+        return 
+    }
+
+
+
         for(var i = 0; i < cantidad; i++){
-            ids[i] = $(".scroll-item:nth-child("+ (i + 1) +")").attr("id")
-            
+            ids[i] = $(".scroll-item:nth-child("+ (i + 1) +")").attr("id") 
         }
 
 
@@ -41,7 +96,7 @@ import $ from 'jquery'
 
 
 
-        $(".lista-scroll").css("width", c.ancho)
+        $(".lista-scroll").css("width", c.ancho + "%")
         $(".lista-scroll ul li a").css("font-size", c.tamFuente)
         $(".elemento-seleccionado").addClass(c.colorBorde)
         $(".lista-scroll").css("top", c.separacion)

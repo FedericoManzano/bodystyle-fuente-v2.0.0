@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../dist/css/bodystyle.css">
+
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <div class="contenedor">
+        <div id="ejemplo1" class="scroll-item"  style="height: 1000px;">Ejemplo1</div>
+        <div id="ejemplo2" class="scroll-item" style="height: 1000px;">Ejemplo2</div>
+    </div>
+
+
+
+    <div class="lista-scroll">
+        <ul>
+            <li><a href="#ejemplo1">Ejemplo1</a></li>
+            <li><a href="#ejemplo2">Ejempl2</a></li>
+        </ul>
+    </div>
+    
+    <div class="btn-flotante">
+        <div class="submenu">
+            <a href="" class="boton-opciones fd-azul icon-cloud-download"></a>
+            <a href="" class="boton-opciones fd-gris icon-user-plus"></a>
+            <a href="" class="boton-opciones fd-gris-n icon-cog"></a>
+            <a href="" class="boton-opciones fd-gris-az icon-plus"></a>
+        </div>
+        <span class="boton-menu icon-menu"></span>
+    </div>
+    
+    <script src="../dist/js/bodystyle.js"></script>
+    <script>BS.ScrollSpyInit({ancho: 20, tamFuente:15, colorBorde:"fd-rojo"})</script>
+    <script>BS.AutoInit()</script>
+</body>
+</html>

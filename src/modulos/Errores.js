@@ -24,7 +24,8 @@
 
         hover: {
             mensaje: "06 Efecto hover erroneo: \n Los valores posibles para el efecto hover del componente select son {none|borde|fondo}"
-        }
+        },
+
     }
 
     window.ERR = ERR

@@ -73,7 +73,7 @@ yarn add body-ui
 
 - Descargar [sass](https://sass-lang.com/install)
 - Descargar [node v8.10.0](https://nodejs.org/es/download/)
-- Descargar [npm v3.5.2](https://www.npmjs.com/get-npm)
+- Descargar [npm v6.14.4](https://www.npmjs.com/get-npm)
 
 ## Autor
 

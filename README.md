@@ -21,7 +21,7 @@ Puede encontrar todo lo referido a la librería (Descarga, componentes, funciona
 
 #### Archivo .zip Fuente
 
-[bodystyle-fuente-v2.0.0](https://github.com/FedericoManzano/bodystyle-fuente-v2.0.0/archive/master.zip)
+[bodystyle-fuente-v2.0.0/archive/master.zip](https://github.com/FedericoManzano/bodystyle-fuente-v2.0.0/archive/master.zip)
 
 ### CDN
 
@@ -59,3 +59,18 @@ npm i body-ui
 #### Yarn
 yarn add body-ui
 
+## Dependencias 
+
+- babel-cli: 7.8.4
+- babel-core: 7.9.0
+- babel-preset-env: 7.9.5
+- webpack: 4.42.1
+- webpack-cli: 3.3.11
+- jquery: 3.5.0
+- babel-loader: 8.1.0
+
+## Tecnologias
+
+- Descargar [sass](https://sass-lang.com/install)
+- Descargar [node v8.10.0](https://nodejs.org/es/download/)
+- Descargar [npm v3.5.2](https://www.npmjs.com/get-npm)
